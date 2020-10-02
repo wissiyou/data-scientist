@@ -14,11 +14,13 @@ journalistes = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzea
 ###############################################
 #Combien y a-t-il de handle dans cette array ?
 ###############################################
-=begin
+
 puts "\n \n"
+puts "----------------------"
 puts "NOMBRE DE JOURNALISTES"
+puts "----------------------"
 puts "Il existe #{journalistes.size} journalistes \n \n"
-=end
+
 
 
 
@@ -26,11 +28,13 @@ puts "Il existe #{journalistes.size} journalistes \n \n"
 #Quelle est le handle le plus court de cette liste ?
 #https://ruby-doc.org/core-2.4.1/Array.html#method-i-min
 ###############################################
-=begin
+puts "\n \n"
+puts "----------------------"
 puts "HANDLE LE PLUS COURT"
+puts "--------------------"
 court = journalistes.min{ |a, b| a.length <=> b.length } 
 puts "#{court}"
-=end
+
 
 
 
@@ -39,11 +43,13 @@ puts "#{court}"
 #https://ruby-doc.org/core-2.4.1/Enumerable.html#method-i-sort_by
 #https://stackoverflow.com/questions/17799871/how-do-i-alphabetize-an-array-ignoring-case/17799952
 ###############################################
-=begin
+puts "\n \n"
+puts "-----------------------------------"
 puts "JOURNALISTES PAR ORDRE ALPHABETIQUE"
+puts "-----------------------------------"
 ordre_alpha = journalistes.sort_by(&:downcase)
 puts ordre_alpha
-=end
+
 
 
 ###############################################
@@ -51,12 +57,13 @@ puts ordre_alpha
 #les plus grands après)
 #https://medium.com/@nothingisfunny/sorting-arrays-in-ruby-375c547a5d6
 ###############################################
-
-=begin
+puts "\n \n"
+puts "--------------------------------"
 puts "JOURNALISTES PAR ORDRE CROISSANT"
+puts "--------------------------------"
 ordre_croissant = journalistes.sort_by{ |word| word.length }
 puts ordre_croissant
-=end
+
 
 
 ###############################################
@@ -74,11 +81,12 @@ puts ordre_croissant
 #https://apidock.com/ruby/Array/index
 ###############################################
 
-=begin
+puts "---------------------"
 puts "POSITION DE @epenser "
+puts "---------------------"
 position = journalistes.index("@epenser")
 puts position
-=end
+
 
 ###############################################
 #Combien y-a-t'il de handle contenant 5 caractères (le @ ne compte pas pour un caractère)
